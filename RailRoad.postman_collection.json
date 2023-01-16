@@ -1,0 +1,953 @@
+{
+	"info": {
+		"_postman_id": "0bcc4fe9-aaca-43ff-99c6-78368eda6ade",
+		"name": "RailRoad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24657989"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post User with token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "toto2@toto2.com",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "voyageur",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "toto2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "toto2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyODA4NDl9.Z4Wf245lYHgvhK0KXJq7YuFYv_D-QVXEv6OXKdHw-OU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/admin@admin.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"admin@admin.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvdG8yIiwiZW1haWwiOiJ0b3RvMkB0b3RvMi5jb20iLCJyb2xlIjoidm95YWdldXIiLCJpYXQiOjE2NzMyODA1NjJ9.ShlmUG7e5hx_bMwqZNIMs-p8K9twlFWgdqy6N4TpgEw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/toto2@toto2.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"toto2@toto2.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user par email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzI3NjE4Mjl9.HjDZ0QqNz7TbkY5KOeDRzSkIEzAsZWAhW3CiXHZvAyg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/tata2@tata2.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"tata2@tata2.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get admin with token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get voyageur with token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "toto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "toto@toto.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "toto",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "voyageur",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route Protected",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzI3NjE4Mjl9.HjDZ0QqNz7TbkY5KOeDRzSkIEzAsZWAhW3CiXHZvAyg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/user/protected",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"protected"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Train",
+			"item": [
+				{
+					"name": "Get Trains",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/train",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Train by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/train/6390b7784a543af4143430cf",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train",
+								"6390b7784a543af4143430cf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Train par heure de départ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/train/date",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train",
+								"date"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Train par Gare de Départ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/train/Paris",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train",
+								"Paris"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Train par Gare d'arrivée",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/train/Lille",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train",
+								"Lille"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Train",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyNzUzMjV9.bqa84MIg_bcqgcuD8ZifIDRKUrP5bovoNgKmoy9B3DY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "TGV4",
+									"type": "text"
+								},
+								{
+									"key": "start_station",
+									"value": "Lens",
+									"type": "text"
+								},
+								{
+									"key": "end_station",
+									"value": "Rennes",
+									"type": "text"
+								},
+								{
+									"key": "time_of_departure",
+									"value": "13:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/train",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Train",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyODA4NDl9.Z4Wf245lYHgvhK0KXJq7YuFYv_D-QVXEv6OXKdHw-OU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/train/63bc27cd91050c770d8bcaa3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train",
+								"63bc27cd91050c770d8bcaa3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete train",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyNzUzMjV9.bqa84MIg_bcqgcuD8ZifIDRKUrP5bovoNgKmoy9B3DY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/train/63bc27cd91050c770d8bcaa3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"train",
+								"63bc27cd91050c770d8bcaa3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gare",
+			"item": [
+				{
+					"name": "Get Gares",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/gare",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Gares ordre alphabétique",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/gare/name",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gare",
+								"name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Gare par Nom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/gare/Avignon",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gare",
+								"Avignon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Gare",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvdG8yIiwiZW1haWwiOiJ0b3RvMkB0b3RvMi5jb20iLCJyb2xlIjoidm95YWdldXIiLCJpYXQiOjE2NzMyODA1NjJ9.ShlmUG7e5hx_bMwqZNIMs-p8K9twlFWgdqy6N4TpgEw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Lyon",
+									"type": "text"
+								},
+								{
+									"key": "open_hour",
+									"value": "8:00",
+									"type": "text"
+								},
+								{
+									"key": "close_hour",
+									"value": "19:00",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "NULL",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/gare",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Gare",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyNzUzMjV9.bqa84MIg_bcqgcuD8ZifIDRKUrP5bovoNgKmoy9B3DY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "open_hour",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "close_hour",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/gare",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Gare",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyNzUzMjV9.bqa84MIg_bcqgcuD8ZifIDRKUrP5bovoNgKmoy9B3DY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/gare/63bc315c3e65228a77c3ff9b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"gare",
+								"63bc315c3e65228a77c3ff9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/image/image_1673280145740.jpg",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"image",
+								"image_1673280145740.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Image dans Gare",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyODAxMjN9.00T8klVtSiPCWHNuMMkWN-bdVinS_T-LBfAU02N1Q9w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/Users/paul-lucas/Desktop/2772715150.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/upload/Lyon",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"upload",
+								"Lyon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Panier",
+			"item": [
+				{
+					"name": "Get Panier Total",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/panier",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"panier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Panier par TGV",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyNzUzMjV9.bqa84MIg_bcqgcuD8ZifIDRKUrP5bovoNgKmoy9B3DY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/panier/train/TGV3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"panier",
+								"train",
+								"TGV3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Panier par User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvdG8iLCJlbWFpbCI6InRvdG9AdG90by5jb20iLCJyb2xlIjoidm95YWdldXIiLCJpYXQiOjE2NzMyNzUyOTZ9.xGLJ-dWFpGdggxSTIGsWBdxt3GcbNKNtlgsXxNR3_JQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/panier/user/toto@toto.com",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"panier",
+								"user",
+								"toto@toto.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Ticket in Panier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvdG8iLCJlbWFpbCI6InRvdG9AdG90by5jb20iLCJyb2xlIjoidm95YWdldXIiLCJpYXQiOjE2NzMyODA3OTZ9.viLaOMpPK2p0sEPRYbClQUwZxYeLxJQv7qHxTyGZZVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/panier/TGV3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"panier",
+								"TGV3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ticket by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzMyODA4NDl9.Z4Wf245lYHgvhK0KXJq7YuFYv_D-QVXEv6OXKdHw-OU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/panier/63bc3e3650cdcda8ae7bb717",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"panier",
+								"63bc3e3650cdcda8ae7bb717"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
